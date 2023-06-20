@@ -1,0 +1,30 @@
+<ngb-alert [class]="'alert mt-3'+ massagebg? ' alert-success':' alert-danger'" role="alert" *ngIf="massage">{{ massage
+}}</ngb-alert>
+
+<div class="container-fuld m-sm-5 m-1 ">
+<form #f="ngForm" (submit)="register(f)">
+  <h1 class="text-center">login Form</h1>
+  <input type="namme" class="form-control mb-5" name="name" id="name" #name="ngModel" ngModel placeholder="name">
+  <input type="email" class="form-control mb-5" name="email" #username="ngModel" ngModel placeholder="email">
+  <div class="input-group mb-3">
+    <input [type]="passwordshow? 'text':'password'" class="form-control" name="password" #password="ngModel" ngModel
+      placeholder="password">
+    <span (click)="passwordeye()" class="input-group-text">
+      <fa-icon [className]="passwordshow? 'd-inline':'d-none'" [icon]="faEye"></fa-icon>
+      <fa-icon [className]="passwordshow? 'd-none':'d-inline'"  [icon]="faEyeSlash"></fa-icon>
+    </span>
+  </div>
+  <div class="input-group mb-3">
+    <input [type]="passwordshow? 'text':'password'" class="form-control" name="cpassword" #cpassword="ngModel"
+      ngModel placeholder="Confine password">
+    <span (click)="passwordeye()" class="input-group-text">
+      <fa-icon [className]="passwordshow? 'd-inline':'d-none'" [icon]="faEye"></fa-icon>
+      <fa-icon [className]="passwordshow? 'd-none':'d-inline'"  [icon]="faEyeSlash"></fa-icon>
+    </span>
+  </div>
+
+  <button class="btn btn-primary float-end">Register</button>
+</form>
+
+
+</div>

@@ -1,0 +1,18 @@
+<table class="table m-3 p-3 table-hover text-center">
+  <thead>
+    <tr >
+      <th >#</th>
+      <th>User Id</th>
+      <th>User Name</th>
+      <th>Buy Form This</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let user of users,index as i">
+    <tr>
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td [routerLink]="'../buy/'+ user.id" class="text-primary">BUY</td>
+    </tr>
+  </tbody>
+</table>

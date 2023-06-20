@@ -1,0 +1,29 @@
+<form #f="ngForm" class="card container py-5 mt-3" (ngSubmit)="send(f)">
+
+  <input type="date" name="date" class="form-control mb-5" id="date" #date="ngModel" ngModel>
+  <button class="btn btn-danger">send</button>
+
+</form>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>number</th>
+      <th>Price</th>
+      <th>Customer</th>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let number of numbers">
+    <tr *ngFor="let numb of number.number,index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ numb.number }}</td>
+      <td>{{ numb.price }}</td>
+      <td>{{ number.customer.name }}</td>
+      <td>{{ number.date }}</td>
+      <td>{{ number.time }}</td>
+    </tr>
+  </tbody>
+</table>
