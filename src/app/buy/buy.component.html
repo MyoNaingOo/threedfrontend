@@ -31,12 +31,15 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Number List</th>
+        <th>Number/th>
+        <th>Price</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of num" >
+    <tbody *ngFor="let item of numberList" >
       <tr>
-        <td>{{ item }}</td>
+        <td>{{ item.number }}</td>
+        <td>{{ item.price }}</td>
+
       </tr>
     </tbody>
   </table>

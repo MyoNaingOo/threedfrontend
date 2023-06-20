@@ -19,7 +19,7 @@ export class BuyComponent {
 
   add(f: NgForm) {
     console.log(f.value);
-    this.numberList.push(f.value);
+    this.numberList.unshift(f.value);
 
   }
 
